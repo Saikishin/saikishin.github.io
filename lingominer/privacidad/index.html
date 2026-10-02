@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad · LingoMiner AI · Saikishin</title>
+<meta name="description" content="Política de privacidad de LingoMiner AI, extensión de navegador de Saikishin.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="brand">Saikishin</a>
+    <nav class="site-nav">
+      <a href="/lingominer">LingoMiner</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="container privacy-body">
+
+<h1 style="font-size:2em; margin-bottom:8px;">Política de privacidad de LingoMiner AI</h1>
+<p class="meta">Última actualización: 2 de octubre de 2026 · Versión 3.0.2</p>
+
+<h2>1. Introducción</h2>
+<p>LingoMiner AI es una extensión de navegador que convierte las selecciones de texto en tarjetas de Anki con cloze real, utilizando la API de Google Gemini para el análisis lingüístico. Esta política describe de forma transparente qué datos toca la extensión, dónde se almacenan y con quién se comparten.</p>
+
+<h2>2. Qué datos maneja</h2>
+<p>LingoMiner AI solo trata los datos estrictamente necesarios para cumplir su única función: crear tarjetas de Anki a partir de las frases que el usuario selecciona explícitamente.</p>
+<ul>
+  <li><strong>Texto seleccionado por el usuario:</strong> la frase o palabra que el usuario decide minar.</li>
+  <li><strong>Clave de API de Gemini:</strong> la clave que el propio usuario introduce en la configuración (modelo BYOK).</li>
+  <li><strong>Tarjetas minadas:</strong> el conjunto de tarjetas generadas y almacenadas localmente.</li>
+  <li><strong>Preferencias de configuración:</strong> idioma nativo (L1), idioma de la interfaz y mazo de destino en Anki.</li>
+</ul>
+<p>La extensión no recopila datos de análisis, telemetría, historial de navegación, información personal identificable ni ningún dato no relacionado con su función.</p>
+
+<h2>3. Dónde se almacenan</h2>
+<p>Todos los datos se guardan exclusivamente en <code>chrome.storage.local</code>, en el equipo del usuario. No se transmiten a servidores del desarrollador ni a ningún otro tercero, excepto los envíos directos que se describen a continuación.</p>
+<ul>
+  <li><strong>Clave de API:</strong> almacenada localmente. Se usa únicamente para autenticar las peticiones a Google Gemini.</li>
+  <li><strong>Tarjetas minadas y preferencias:</strong> almacenadas localmente. Persisten hasta que el usuario las elimine manualmente o desinstale la extensión.</li>
+</ul>
+
+<h2>4. Qué se envía y a quién</h2>
+<p>LingoMiner AI solo contacta con servicios externos cuando el usuario lo solicita explícitamente mediante una acción (botón flotante, menú contextual o atajo de teclado).</p>
+<ul>
+  <li><strong>Google Gemini API:</strong> cuando el usuario mina una frase, el texto seleccionado se envía directamente desde el navegador del usuario a la API de Google Gemini para su análisis. Esta transmisión se realiza directamente, sin servidores intermediarios del desarrollador. El tratamiento posterior de esos datos se rige por la política de privacidad de Google.</li>
+  <li><strong>AnkiConnect:</strong> cuando el usuario sincroniza, la extensión se comunica con AnkiConnect en <code>http://127.0.0.1:8765</code>. Esta comunicación es estrictamente local, en el propio equipo del usuario.</li>
+</ul>
+<p>La clave de API del usuario nunca se transmite a servidores del desarrollador. Viaja directamente a Google como parte de la autenticación de la petición.</p>
+
+<h2>5. Permisos y finalidad</h2>
+<ul>
+  <li><strong>storage:</strong> almacenar localmente la clave de API, las tarjetas minadas y las preferencias.</li>
+  <li><strong>contextMenus:</strong> añadir la opción «Minar con LingoMiner AI» al menú contextual.</li>
+  <li><strong>host_permissions generativelanguage.googleapis.com:</strong> realizar las peticiones a la API de Google Gemini.</li>
+  <li><strong>host_permissions 127.0.0.1 y localhost:</strong> comunicarse con AnkiConnect en el puerto 8765.</li>
+</ul>
+<p>La extensión no solicita permisos de historial, pestañas, marcadores ni ningún otro que no sea imprescindible para su funcionamiento.</p>
+
+<h2>6. Retención y eliminación</h2>
+<ul>
+  <li><strong>Datos locales:</strong> permanecen en el equipo del usuario hasta que este los elimina desde el panel de la extensión o desinstala la extensión.</li>
+  <li><strong>Datos enviados a Google:</strong> el tratamiento y la retención por parte de Google se rigen por la política de privacidad de Google. El usuario puede consultar los detalles en la política de privacidad de Google.</li>
+  <li><strong>Eliminación de datos:</strong> el usuario puede vaciar el mazo local, borrar tarjetas individuales o desinstalar la extensión para eliminar todos los datos locales.</li>
+</ul>
+
+<h2>7. Seguridad</h2>
+<ul>
+  <li><strong>Comunicaciones cifradas:</strong> todas las peticiones a la API de Google Gemini se realizan sobre HTTPS.</li>
+  <li><strong>Almacenamiento local:</strong> los datos se guardan en <code>chrome.storage.local</code>, que está aislado por el navegador.</li>
+  <li><strong>Sin servidores propios:</strong> al no existir un backend del desarrollador, no hay riesgo de filtración desde servidores externos.</li>
+</ul>
+
+<h2>8. Derechos del usuario</h2>
+<p>El usuario tiene control total sobre sus datos:</p>
+<ul>
+  <li><strong>Acceso:</strong> puede ver todas las tarjetas minadas desde el panel de la extensión.</li>
+  <li><strong>Eliminación:</strong> puede borrar tarjetas individuales o vaciar el mazo completo.</li>
+  <li><strong>Portabilidad:</strong> puede exportar las tarjetas a un archivo TSV.</li>
+  <li><strong>Retirada del consentimiento:</strong> puede desinstalar la extensión, lo que elimina todos los datos locales.</li>
+</ul>
+
+<h2>9. Cambios en la política</h2>
+<p>Si se realizan cambios materiales en esta política, se actualizará la fecha de «última actualización» y se notificará a los usuarios a través de la ficha de la Chrome Web Store.</p>
+
+<h2>10. Contacto</h2>
+<p>Para cualquier consulta sobre esta política de privacidad, el usuario puede escribir a <a href="mailto:hola@saikishin.com">hola@saikishin.com</a>.</p>
+
+</div>
+</main>
+
+<footer class="site-footer">
+  © 2026 Saikishin · <a href="/lingominer">LingoMiner</a> · <a href="/contacto">Contacto</a>
+</footer>
+
+</body>
+</html>
