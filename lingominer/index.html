@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LingoMiner AI · Saikishin</title>
+<meta name="description" content="LingoMiner AI convierte cualquier texto en tarjetas Anki con cloze real. Sentence mining automatizado con arquitectura L1/L2, análisis lingüístico y sincronización directa con Anki.">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="brand">Saikishin</a>
+    <nav class="site-nav">
+      <a href="/lingominer">LingoMiner</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>LingoMiner AI</h1>
+  <p class="lead">Convierte cualquier texto en tarjetas Anki con cloze real.</p>
+</section>
+
+<div class="container">
+
+<section>
+  <p>LingoMiner AI es una extensión de navegador que transforma las frases que seleccionas mientras navegas en tarjetas Anki listas para estudiar. A diferencia de otras herramientas de sentence mining, LingoMiner no se limita a extraer texto: analiza la frase con inteligencia artificial y genera una tarjeta de cloze real con traducción contextual, nota gramatical, fonética del lema y clasificación taxonómica.</p>
+</section>
+
+<section>
+  <h2>Qué hace especial a LingoMiner</h2>
+  <div class="features">
+
+    <div class="feature-card">
+      <h4>Cloze real de Anki</h4>
+      <p>Usa el tipo de nota nativo con <code>{{c1::...}}</code>. Scheduler específico, estadísticas nativas y compatibilidad total con Anki, AnkiDroid y AnkiMobile.</p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Arquitectura L1/L2</h4>
+      <p>Declara tu idioma nativo (L1) y LingoMiner detecta el idioma del texto (L2). Las traducciones y las notas gramaticales se generan siempre en tu idioma.</p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Análisis lingüístico</h4>
+      <p>Clasifica el input como oración, sintagma, palabra o unidad multipalabra. Cuando la selección no tiene contexto suficiente, genera una oración natural que la contenga.</p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Sincronización directa con Anki</h4>
+      <p>Vía AnkiConnect en el puerto 8765. Sin archivos intermedios, sin pasos manuales, sin fricción.</p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Taxonomía cuadridimensional</h4>
+      <p>Cada tarjeta se clasifica con 4 etiquetas: dominio, función pragmática, nivel (MCER, JLPT, HSK o TOPIK) y registro u origen.</p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Privacidad por diseño</h4>
+      <p>Modelo BYOK: tú traes tu propia clave de API de Google Gemini. Sin servidores intermedios. Los datos se quedan en tu navegador y en tu Anki.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Idiomas soportados</h2>
+  <p>LingoMiner soporta actualmente 11 idiomas como idioma objetivo:</p>
+  <p><strong>Lenguas occidentales con marco MCER:</strong> inglés, gallego, alemán, francés, italiano, portugués, catalán y euskera.</p>
+  <p><strong>Lenguas con marco específico:</strong> japonés (JLPT), chino mandarín (HSK) y coreano (TOPIK).</p>
+</section>
+
+<section>
+  <h2>Requisitos técnicos</h2>
+  <ul>
+    <li>Navegador: Chrome o Edge (versión 103 o superior)</li>
+    <li>Anki: versión 2.1.50 o superior</li>
+    <li>AnkiConnect: add-on de Anki (código 2055492159)</li>
+    <li>Cuenta de Google: para obtener la API Key de Gemini</li>
+    <li>Sistema operativo: Windows, macOS o Linux</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Sobre el audio</h2>
+  <p>LingoMiner genera tarjetas con el texto listo para locución. El audio puede generarse de tres formas: con el TTS integrado del navegador, con la voz de Google Cloud TTS a través de AwesomeTTS, o con grabaciones propias. En idiomas minoritarios como el gallego, el catalán o el euskera, la calidad del TTS del navegador depende de las voces instaladas en tu sistema. Recomendamos configurar AwesomeTTS con Google Cloud para obtener resultados profesionales.</p>
+</section>
+
+<section>
+  <h2>Soporte</h2>
+  <p>¿Dudas, sugerencias o problemas? Escríbenos a <a href="mailto:hola@saikishin.com">hola@saikishin.com</a>.</p>
+</section>
+
+</div>
+
+</main>
+
+<footer class="site-footer">
+  © 2026 Saikishin · LingoMiner AI es un producto de Saikishin<br>
+  <a href="/lingominer/privacidad">Política de privacidad</a> · <a href="/contacto">Contacto</a>
+</footer>
+
+</body>
+</html>
